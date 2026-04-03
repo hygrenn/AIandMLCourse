@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "physics-nn-explorer"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "pyside6",
+    "tensorflow",
+    "numpy",
+    "matplotlib",
+    "scipy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-qt"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["core", "labs"]
